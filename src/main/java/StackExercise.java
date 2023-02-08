@@ -1,3 +1,4 @@
+import java.util.*;
 import java.util.Deque;
 /**
  * Stacks are LIFO - last in, first out, like a stack of plates or books, or the puzzle game "Towers of Hanoi".
@@ -19,8 +20,10 @@ public class StackExercise {
      *
      * @return a newly instantiated Deque. Deques implement both stack and queue behavior.
      */
-    public Deque<String> createNewStack(){
-        return null;
+    public Deque<String> createNewStack()
+    {
+        Deque<String> deque_1 = new LinkedList<String>();
+        return deque_1;
     }
 
     /**
@@ -28,7 +31,7 @@ public class StackExercise {
      * @return the number of elements in the deque.
      */
     public int getSize(Deque<String> stack){
-        return 0;
+        return stack.size();
     }
 
     /**
@@ -37,7 +40,9 @@ public class StackExercise {
      * @param stack A Deque of Strings.
      * @param item a String to be added to the deque.
      */
-    public void addToTopOfStack(Deque<String> stack, String item){
+    public void addToTopOfStack(Deque<String> stack, String item)
+    {
+        stack.addFirst(item);
     }
 
     /**
@@ -46,8 +51,10 @@ public class StackExercise {
      * @param stack A Deque of Strings.
      * @return the value popped from the top of the deque.
      */
-    public String removeFromTopOfStack(Deque<String> stack){
-        return "";
+    public String removeFromTopOfStack(Deque<String> stack)
+    {
+        String first_value = stack.removeFirst();
+        return first_value;
     }
     /**
      * Peek the value at the top of a deque.
@@ -56,7 +63,9 @@ public class StackExercise {
      * @param stack A Deque of Strings.
      * @return the value peeked from the top of the deque.
      */
-    public String getTopOfStackWithoutRemoving(Deque<String> stack){
-        return "";
+    public String getTopOfStackWithoutRemoving(Deque<String> stack)
+    {
+        String peek_first_value = stack.peek();
+        return peek_first_value;
     }
 }
